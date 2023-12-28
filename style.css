@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary */
+
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  /* (paragraphs) */
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+/* desktop 915px */
+/* mobile 325px*/
+
+body {
+  font-size: 15px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 10px 0;
+  width: 325px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.sedans {
+  background-color: var(--brightOrange);
+  border-radius: 5px 5px 0 0;
+}
+
+.suvs {
+  background-color: var(--darkCyan);
+}
+
+.luxury {
+  background-color: var(--veryDarkCyan);
+  border-radius: 0 0 5px 5px;
+}
+
+.container img {
+  width: 45px;
+  height: 25px;
+}
+
+.container h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  font-size: 26px;
+  color: var(--veryLightGray);
+}
+
+.container p {
+  font-family: "Lexend Deca";
+  color: var(--transparentWhite);
+}
+
+.container button {
+  padding: 12px 25px;
+  width: max-content;
+  border-radius: 100px;
+  border: 2px solid transparent;
+  text-transform: capitalize;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .sedans button {
+  color: var(--brightOrange);
+}
+
+.container .suvs button {
+  color: var(--darkCyan);
+}
+
+.container .luxury button {
+  color: var(--veryDarkCyan);
+}
+
+.container button:hover,
+.container button:active {
+  background-color: transparent;
+  color: white;
+  border: 2px solid var(--transparentWhite);
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    height: 100vh;
+  }
+
+  .container {
+    width: 915px;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .sedans,
+  .suvs,
+  .luxury {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .container img {
+    width: 65px;
+    height: 40px;
+    margin: 20px 0;
+  }
+
+  .container h2 {
+    font-size: 40px;
+  }
+
+  .container p {
+    margin: 20px 0 70px;
+  }
+
+  .container button {
+    padding: 12px 35px;
+    font-size: 1.1em;
+  }
+}
